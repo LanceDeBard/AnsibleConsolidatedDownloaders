@@ -1,0 +1,21 @@
+---
+- hosts: otaserver
+  name: Main file for ConsolidatedDownloader
+  vars:
+    containernames:
+      - deluge
+      - jackett
+      - lidarr
+      - radarr
+      - sonarr
+  vars_files:
+    - vars/Constants.yml
+  tasks:
+    - name: Import Docker Install
+      import_tasks: docker.yaml
+
+    - name: Include Update Install
+      include_tasks: update.yaml
+      vars:
+        containername: "{{ item }}"
+      loop: "{{ containernames }}"

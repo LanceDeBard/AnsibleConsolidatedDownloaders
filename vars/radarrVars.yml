@@ -1,0 +1,8 @@
+---
+image: linuxserver/radarr
+usedports:
+  - 8705:7878
+externalvolumes:
+  - /mnt/External/VMs/Docker/radarr
+  - /mnt/External/Media/Vids/Movies:/movies
+  - /mnt/Overdrive/Downloads:/downloads

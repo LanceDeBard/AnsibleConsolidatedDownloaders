@@ -1,0 +1,7 @@
+---
+image: linuxserver/sonarr
+usedports:
+  - 8704:8989
+externalvolumes:
+  - /mnt/External/VMs/Docker/sonarr:/config
+  - /mnt/Overdrive/Downloads/:/downloads

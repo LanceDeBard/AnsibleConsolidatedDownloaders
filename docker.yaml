@@ -1,0 +1,22 @@
+---
+    - name: Install Docker
+      package:
+        name: docker
+        state: latest
+
+    - name: Start Docker Service
+      service:
+        name: docker.service
+        state: started
+        enabled: true
+
+    - name: Install pip
+      package: 
+        name: python-pip
+        state: latest
+
+    - name: Install Docker Python Library
+      pip:
+        name: docker
+        state: present
+        executable: pip3

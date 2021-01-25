@@ -1,0 +1,8 @@
+---
+image: linuxserver/lidarr
+usedports:
+  - 8703:8686
+externalvolumes:
+  - /mnt/External/VMs/Docker/lidarr:/config
+  - /mnt/External/Media/Music:/music
+  - /mnt/Overdrive/Downloads:/downloads

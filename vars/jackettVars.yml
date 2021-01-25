@@ -1,0 +1,7 @@
+---
+image: linuxserver/jackett
+externalvolumes:
+  - /mnt/External/VMs/Docker/jackett:/config
+  - /mnt/Overdrive/Downloads/Blackhole:/downloads/
+usedports:
+  - 8701:9117

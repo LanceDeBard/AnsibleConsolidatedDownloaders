@@ -1,0 +1,10 @@
+---
+image: linuxserver/deluge
+usedports:
+  - 8112:8112
+  - 58846:58846
+externalvolumes:
+  - /mnt/External/VMs/Docker/deluge:/config
+  - /mnt/Overdrive/Downloads:/downloads
+  - /mnt/External/Media:/drives/Media
+  - /mnt/Library:/downloads/Books
